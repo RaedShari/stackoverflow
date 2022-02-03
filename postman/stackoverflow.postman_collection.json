@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "2d7be2bd-fa86-4e2b-a81e-a11bf72d6f6b",
+		"name": "stackoverflow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/questions",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all questions by tag",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/questions?tag=new",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"questions"
+					],
+					"query": [
+						{
+							"key": "tag",
+							"value": "new"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get question by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/questions/14",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"questions",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"Another Question\",\n    \"body\":\"this is new question\",\n    \"tags\":[\"new\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/questions",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get question answers",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/questions/1/answers",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"questions",
+						"1",
+						"answers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add answer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"body\":\"I'm answering question 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/questions/1/answers",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"questions",
+						"1",
+						"answers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get question comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/questions/1/comments",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"questions",
+						"1",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add question comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"body\":\"Nice question bro!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/questions/1/comments",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"questions",
+						"1",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get answers comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/answers/1/comments",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"answers",
+						"1",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add answer comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"body\":\"Thanks for the answer!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/answers/1/comments",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"answers",
+						"1",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
