@@ -24,5 +24,4 @@ public abstract class BaseException extends RuntimeException {
         this.messageKey = messageKey;
     }
 
-    public abstract HttpStatus getStatusCode();
 }
